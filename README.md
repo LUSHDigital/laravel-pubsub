@@ -17,7 +17,7 @@ The following adapters are supported:
 composer require lushdigital/lumen-pubsub
 ```
 
-Register the service provider with Lumen in the bootstrap/app.php file:
+Register the service provider with Lumen in the `bootstrap/app.php` file:
 
 ```php
 $app->register(LushDigital\LumenPubSub\PubSubServiceProvider::class);
