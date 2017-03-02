@@ -30,7 +30,7 @@ Register the service provider in app.php
 ```php
 'providers' => [
     // ...
-    Superbalist\LaravelPubSub\PubSubServiceProvider::class,
+    LushDigital\LumenPubSub\PubSubServiceProvider::class,
 ]
 ```
 
@@ -38,7 +38,7 @@ Register the facade in app.php
 ```php
 'aliases' => [
     // ...
-    'PubSub' => Superbalist\LaravelPubSub\PubSubFacade::class,
+    'PubSub' => LushDigital\LumenPubSub\PubSubFacade::class,
 ]
 ```
 
@@ -58,7 +58,7 @@ GOOGLE_CLOUD_KEY_FILE=path/to/your/gcloud-key.json
 
 To customize the configuration file, publish the package configuration using Artisan.
 ```bash
-php artisan vendor:publish --provider="Superbalist\LaravelPubSub\PubSubServiceProvider"
+php artisan vendor:publish --provider="LushDigital\LumenPubSub\PubSubServiceProvider"
 ```
 
 You can then edit the generated config at `app/config/pubsub.php`.
@@ -193,7 +193,7 @@ Here is an example of how you can do this:
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Superbalist\LaravelPubSub\PubSubConnectionFactory;
+use LushDigital\LumenPubSub\PubSubConnectionFactory;
 use Superbalist\PubSub\PubSubAdapterInterface;
 
 class MyExampleKafkaSubscriber extends Command

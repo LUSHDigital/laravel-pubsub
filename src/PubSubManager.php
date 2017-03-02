@@ -1,15 +1,15 @@
 <?php
 
-namespace Superbalist\LaravelPubSub;
+namespace LushDigital\LumenPubSub;
 
-use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Container\Container;
 use InvalidArgumentException;
 use Superbalist\PubSub\PubSubAdapterInterface;
 
 class PubSubManager
 {
     /**
-     * @var Application
+     * @var Container
      */
     protected $app;
 
@@ -29,10 +29,10 @@ class PubSubManager
     protected $extensions = [];
 
     /**
-     * @param Application $app
+     * @param Container $app
      * @param PubSubConnectionFactory $factory
      */
-    public function __construct(Application $app, PubSubConnectionFactory $factory)
+    public function __construct(Container $app, PubSubConnectionFactory $factory)
     {
         $this->app = $app;
         $this->factory = $factory;

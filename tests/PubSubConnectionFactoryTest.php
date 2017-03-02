@@ -7,7 +7,7 @@ use Illuminate\Contracts\Container\Container;
 use InvalidArgumentException;
 use Mockery;
 use Predis\Client as RedisClient;
-use Superbalist\LaravelPubSub\PubSubConnectionFactory;
+use LushDigital\LumenPubSub\PubSubConnectionFactory;
 use Superbalist\PubSub\Adapters\DevNullPubSubAdapter;
 use Superbalist\PubSub\Adapters\LocalPubSubAdapter;
 use Superbalist\PubSub\GoogleCloud\GoogleCloudPubSubAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Superbalist\LaravelPubSub;
+namespace LushDigital\LumenPubSub;
 
 use Google\Cloud\PubSub\PubSubClient as GoogleCloudPubSubClient;
 use Illuminate\Support\ServiceProvider;
@@ -15,7 +15,7 @@ class PubSubServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/pubsub.php' => config_path('pubsub.php'),
+            __DIR__ . '/../config/pubsub.php' => base_path('config/pubsub.php'),
         ]);
     }
 

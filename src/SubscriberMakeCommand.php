@@ -1,6 +1,6 @@
 <?php
 
-namespace Superbalist\LaravelPubSub;
+namespace LushDigital\LumenPubSub;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputArgument;
