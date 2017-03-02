@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0 - 2017-03-02
+
+* Added lumen support.
+* Updated README.
+* Updated changelog.
+
 ## 2.0.1 - 2017-01-03
 
 * Allow for superbalist/php-pubsub-google-cloud ^3.0

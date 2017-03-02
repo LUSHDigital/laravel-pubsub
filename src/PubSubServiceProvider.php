@@ -33,7 +33,7 @@ class PubSubServiceProvider extends ServiceProvider
         $this->app->singleton('pubsub', function ($app) {
             return new PubSubManager($app, $app['pubsub.factory']);
         });
-        
+
         $this->app->bind('pubsub.connection', PubSubAdapterInterface::class);
 
         $this->app->bind(PubSubAdapterInterface::class, function ($app) {
