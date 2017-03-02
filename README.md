@@ -2,16 +2,7 @@
 
 A Pub-Sub abstraction for Laravel.
 
-[![Author](http://img.shields.io/badge/author-@superbalist-blue.svg?style=flat-square)](https://twitter.com/superbalist)
-[![Build Status](https://img.shields.io/travis/Superbalist/laravel-pubsub/master.svg?style=flat-square)](https://travis-ci.org/Superbalist/laravel-pubsub)
-[![StyleCI](https://styleci.io/repos/67405993/shield?branch=master)](https://styleci.io/repos/67405993)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Packagist Version](https://img.shields.io/packagist/v/superbalist/laravel-pubsub.svg?style=flat-square)](https://packagist.org/packages/superbalist/laravel-pubsub)
-[![Total Downloads](https://img.shields.io/packagist/dt/superbalist/laravel-pubsub.svg?style=flat-square)](https://packagist.org/packages/superbalist/laravel-pubsub)
-
-This package is a wrapper bridging [php-pubsub](https://github.com/Superbalist/php-pubsub) into Laravel.
-
-For **Laravel 4** support, use the package https://github.com/Superbalist/laravel4-pubsub
+This package is a wrapper bridging [php-pubsub](https://github.com/Superbalist/php-pubsub) into Lumen.
 
 The following adapters are supported:
 * Local
@@ -23,23 +14,13 @@ The following adapters are supported:
 ## Installation
 
 ```bash
-composer require superbalist/laravel-pubsub
+composer require lushdigital/lumen-pubsub
 ```
 
-Register the service provider in app.php
-```php
-'providers' => [
-    // ...
-    LushDigital\LumenPubSub\PubSubServiceProvider::class,
-]
-```
+Register the service provider with Lumen in the bootstrap/app.php file:
 
-Register the facade in app.php
 ```php
-'aliases' => [
-    // ...
-    'PubSub' => LushDigital\LumenPubSub\PubSubFacade::class,
-]
+$app->register(LushDigital\LumenPubSub\PubSubServiceProvider::class);
 ```
 
 The package has a default configuration which uses the following environment variables.
@@ -56,12 +37,14 @@ GOOGLE_CLOUD_PROJECT_ID=your-project-id-here
 GOOGLE_CLOUD_KEY_FILE=path/to/your/gcloud-key.json
 ```
 
-To customize the configuration file, publish the package configuration using Artisan.
-```bash
-php artisan vendor:publish --provider="LushDigital\LumenPubSub\PubSubServiceProvider"
+To customize the configuration file simply copy it from `vendor/lushdigital/lumen-pubsub/config/pubsub.php` to
+`app/config/pubsub.php`. Then you need to add the following line to `bootstrap/app.php`:
+
+```php
+$app->configure('pubsub');
 ```
 
-You can then edit the generated config at `app/config/pubsub.php`.
+You can then edit the config at `app/config/pubsub.php`.
 
 ## Kafka Adapter Installation
 

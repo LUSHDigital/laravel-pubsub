@@ -1,6 +1,6 @@
 {
-  "name": "lushdigital/laravel-pubsub",
-  "description": "A Pub-Sub abstraction for Laravel",
+  "name": "lushdigital/lumen-pubsub",
+  "description": "A Pub-Sub abstraction for Lumen",
   "license": "MIT",
   "authors": [
     {

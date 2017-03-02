@@ -34,6 +34,9 @@ class PubSubServiceProvider extends ServiceProvider
             return new PubSubManager($app, $app['pubsub.factory']);
         });
 
+        // Register the facade.
+        class_alias(PubSubManager::class, 'PubSub');
+
         $this->app->bind('pubsub.connection', PubSubAdapterInterface::class);
 
         $this->app->bind(PubSubAdapterInterface::class, function ($app) {
