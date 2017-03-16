@@ -166,7 +166,7 @@ name to the command list.
 
 ```php
 protected $commands = [
-    Commands\SendEmails::class
+    Commands\MyExampleSubscriber::class
 ];
 ```
 
