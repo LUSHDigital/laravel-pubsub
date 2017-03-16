@@ -159,6 +159,16 @@ class MyExampleSubscriber extends Command
     }
 }
 ```
+Once the command has been generated, do not forget to register it with Artisan.
+
+This is done by editing the `app/Console/Kernel.php` file. To register your command, simply add the command's class
+name to the command list. 
+
+```php
+protected $commands = [
+    Commands\SendEmails::class
+];
+```
 
 ### Kafka Subscribers ###
 
