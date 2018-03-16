@@ -59,6 +59,7 @@ return [
             'client_identifier' => null,
             'auto_create_topics' => true,
             'auto_create_subscriptions' => true,
+            'transport' => 'rest',
         ],
 
     ],
