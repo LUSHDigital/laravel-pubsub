@@ -111,7 +111,7 @@ class PubSubConnectionFactory
         $clientConfig = [
             'projectId' => $config['project_id'],
             'keyFilePath' => $config['key_file'],
-            'transport' => $config['transport'],
+            'transport' => isset($config['transport']) ? $config['transport'] : 'rest',
         ];
         $client = $this->container->make('pubsub.gcloud.pub_sub_client', ['config' => $clientConfig]);
 
